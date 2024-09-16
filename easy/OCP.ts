@@ -32,7 +32,7 @@ class Developer extends Employee {
  * This class extends the Employee class and overrides the calculateSalary method
  * to include a bonus specific to managers.
  */
-class Manager extends Employee {
+class SalaryManager extends Employee {
     /**
      * Calculates the salary of the manager, including the base salary and a manager bonus.
      * @returns The total salary amount for a manager.
@@ -43,7 +43,7 @@ class Manager extends Employee {
 }
 
 // Create an array of employees, including developers and managers.
-const employees: Employee[] = [new Developer(), new Manager()];
+const employees: Employee[] = [new Developer(), new SalaryManager()];
 
 // Iterate over each employee and print their calculated salary to the console.
 employees.forEach(emp => console.log(emp.calculateSalary()));

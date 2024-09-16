@@ -2,7 +2,7 @@
  * Interface representing a worker.
  * This interface defines a method for working.
  */
-interface Worker {
+interface Workable {
     /**
      * Method to perform work.
      */
@@ -25,7 +25,7 @@ interface Sleepable {
  * This class implements both Worker and Sleepable interfaces,
  * indicating that a human can both work and sleep.
  */
-class HumanWorker implements Worker, Sleepable {
+class HumanEmployee implements Workable, Sleepable {
     /**
      * Implements the work method for a human worker.
      * Logs "Working" to the console.
@@ -48,7 +48,7 @@ class HumanWorker implements Worker, Sleepable {
  * This class implements only the Worker interface,
  * indicating that a robot can only work and does not need to sleep.
  */
-class RobotWorker implements Worker {
+class RobotEmployee implements Workable {
     /**
      * Implements the work method for a robot worker.
      * Logs "Working non-stop" to the console.
@@ -59,10 +59,10 @@ class RobotWorker implements Worker {
 }
 
 // Create an instance of HumanWorker and call its methods.
-const human = new HumanWorker();
-human.work();  // Output: Working
-human.sleep(); // Output: Sleeping
+const humanEmployee = new HumanEmployee();
+humanEmployee.work();  // Output: Working
+humanEmployee.sleep(); // Output: Sleeping
 
 // Create an instance of RobotWorker and call its method.
-const robot = new RobotWorker();
+const robotEmployee = new RobotEmployee();
 robot.work();  // Output: Working non-stop
