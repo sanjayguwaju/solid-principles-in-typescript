@@ -1,0 +1,17 @@
+{
+    "name": "solid-in-principles-in-typescript",
+    "version": "1.0.0",
+    "description": "A brief description of your project",
+    "main": "dist/index.js",
+    "scripts": {
+      "build": "tsc",
+      "start": "node dist/index.js",
+      "tsc-node": "ts-node"
+    },
+    "devDependencies": {
+      "typescript": "^4.0.0",
+      "ts-node": "^10.0.0"
+    },
+    "author": "Sanjay Guwaju",
+    "license": "MIT"
+  }
