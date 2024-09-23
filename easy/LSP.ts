@@ -1,8 +1,19 @@
 /**
- * Base class representing a bird.
+ * Interface representing a bird that can fly.
+ */
+interface Flyable {
+    /**
+     * Method to simulate flying.
+     * @returns A string indicating the bird is flying.
+     */
+    fly(): string;
+}
+
+/**
+ * Class representing a generic bird.
  * This class provides a method for flying.
  */
-class Bird {
+class Bird implements Flyable {
     /**
      * Simulates the bird flying.
      * @returns A string indicating the bird is flying.
@@ -14,26 +25,26 @@ class Bird {
 
 /**
  * Class representing a penguin.
- * This class extends the Bird class but overrides the fly method
- * to indicate that penguins cannot fly.
+ * This class does not implement the Flyable interface
+ * because penguins cannot fly.
  */
-class Penguin extends Bird {
+class Penguin {
     /**
-     * Simulates the penguin attempting to fly.
-     * @throws An error indicating that penguins cannot fly.
+     * Simulates the penguin swimming.
+     * @returns A string indicating the penguin is swimming.
      */
-    fly(): string {
-        throw new Error("Penguins cannot fly");
+    swim(): string {
+        return "Swimming";
     }
 }
 
 /**
  * Function to make a bird fly.
- * This function takes a Bird object and calls its fly method,
+ * This function takes a Flyable object and calls its fly method,
  * then logs the result to the console.
- * @param bird - The Bird object to make fly.
+ * @param bird - The Flyable object to make fly.
  */
-function makeBirdFly(bird: Bird): void {
+function makeBirdFly(bird: Flyable): void {
     console.log(bird.fly());
 }
 
@@ -41,6 +52,6 @@ function makeBirdFly(bird: Bird): void {
 const bird = new Bird();
 makeBirdFly(bird); // Output: Flying
 
-// Create an instance of Penguin and attempt to make it fly.
+// Create an instance of Penguin and make it swim.
 const penguin = new Penguin();
-makeBirdFly(penguin); // Error: Penguins cannot fly
+console.log(penguin.swim()); // Output: Swimming
