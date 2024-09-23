@@ -28,3 +28,24 @@ The S.O.L.I.D principles are a set of design principles in object-oriented progr
 - **Purpose**: This principle aims to reduce the coupling between high-level and low-level modules, making the system more modular and easier to maintain.
 
 These principles collectively help in building robust, scalable, and maintainable software systems.
+
+## Running the Code
+
+To run the TypeScript code, follow these steps:
+
+1. **Install dependencies**:
+
+    ```sh
+    npm install
+    ```
+
+2. **Run the TypeScript file using `ts-node`**:
+
+    ```sh
+    npm run tsc-node folder/filename.ts
+    ```
+
+For example, to run the `DIP.ts` file located in the `easy` folder:
+
+```sh
+npm run tsc-node easy/DIP.ts
