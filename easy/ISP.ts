@@ -65,4 +65,4 @@ humanEmployee.sleep(); // Output: Sleeping
 
 // Create an instance of RobotWorker and call its method.
 const robotEmployee = new RobotEmployee();
-robot.work();  // Output: Working non-stop
+robotEmployee.work();  // Output: Working non-stop

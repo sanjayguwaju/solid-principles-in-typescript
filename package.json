@@ -4,14 +4,14 @@
     "description": "A brief description of your project",
     "main": "dist/index.js",
     "scripts": {
-      "build": "tsc",
-      "start": "node dist/index.js",
-      "tsc-node": "ts-node"
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "tsc-node": "ts-node"
     },
     "devDependencies": {
-      "typescript": "^5.6.2",
-      "ts-node": "^10.9.2"
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.2"
     },
     "author": "Sanjay Guwaju",
     "license": "MIT"
-  }
+}
